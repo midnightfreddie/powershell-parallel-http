@@ -6,7 +6,7 @@
         $ScriptBlock = {
             $Parameters = @{
                 Uri = $_
-                Headers = @{ host = "midnightfreddie.com" }
+                Headers = @{ host = "midnightfreddie.com" } ##### NOTE! DELETE THIS LINE! I am using this due to how I'm testing against my servers, but you don't want this; it will probably mess you up
                 UseBasicParsing = $true
             }
             try {
@@ -45,5 +45,5 @@ Get-Content $UrlsFile | ForEach-Object {
     $Uri = $_.Trim('"')
     $Uri
 } | Do-Cool-Parallel-Thingy-That-Takes-Uris-Via-Pipeline |
-    ?{ $_.StatusCode -ne "Request Error" }
-    #fl
+    # ?{ $_.StatusCode -ne "Request Error" }
+    Format-List

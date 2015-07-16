@@ -9,3 +9,5 @@ So I'm working towards setting up a set number of jobs and starting each with a 
 reddit post: https://www.reddit.com/r/PowerShell/comments/3den19/powershell_script_to_call_url_from_file/
 
 My initial reply: https://www.reddit.com/r/PowerShell/comments/3den19/powershell_script_to_call_url_from_file/ct4zm6o
+
+**Note:** If you run this, delete or comment out the `Headers = ` line in the `$Parameters` assignnent block or else it will may result in a lot of unexpected responses. (Basically I'm hitting a back-end server to avoid logging my test runs on my main logs, but I have to set the vhost to get the right site in my case.)
